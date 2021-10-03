@@ -1,5 +1,5 @@
 CREATE DATABASE "ComunidadesIndigenas";
-\c comunidades_indigenas;
+\c ComunidadesIndigenas;
 
 --Tabla departamentos.--
 
@@ -46,7 +46,7 @@ INSERT INTO municipio (mun_nombre,mun_texto,fk_dep_id) VALUES
 --Tabla asociaciones.--
 CREATE TABLE asociacion_autoridad(
 	aso_id SERIAL,
-	aso_nombre VARCHAR(150),
+	aso_nombre VARCHAR(150) NOT NULL,
 	aso_texto TEXT,
 	PRIMARY KEY(aso_id)
 );
@@ -77,8 +77,8 @@ CREATE TABLE resguardo(
 
 INSERT INTO resguardo (res_id,res_nombre,res_poblacion,res_texto,fk_aso_id,fk_mun_id) VALUES	
 	(1002,'PREDIO PUTUMAYO',1315,'cubre una extensión territorial de 5.869.447 en la que habitan comunidades pertenecientes a varios grupos étnicos y lingüísticos como Witoto, Mirañas, Boras, Andoques, Ocainas, Muinanes, Nonuyas, además de estos también se encuentran poblaciones pertenecientes a los grupos étnicos Murui-Muinane, Carijona, Yucuna, Cabiyarí, Inga, Siona, y Letuama, entre otras.',1,1),
-	(1086,'CAÑAMOMO-LOMAPRIETA',7288,'El Resguardo Cañamomo y Lomaprieta se encuentra ubicado en los municipios de Riosucio y Supía Caldas, es considerado uno de los más antiguos de Colombia.Cañamomo y Lomaprieta es uno de los 6 resguardos indígenas legalmente constituidos en el departamento de Caldas. Cuenta con 32 comunidades.',2,3),
-	(1087,'CAÑAMOMO-LOMAPRIETA',5397,'El Resguardo Cañamomo y Lomaprieta se encuentra ubicado en los municipios de Riosucio y Supía Caldas, es considerado uno de los más antiguos de Colombia.Cañamomo y Lomaprieta es uno de los 6 resguardos indígenas legalmente constituidos en el departamento de Caldas. Cuenta con 32 comunidades.',2,4),
+	(1004,'PUERTO CORDOBA',194,'El Resguardo Puerto Cordoba se encuentra ubicado en el municipio de Riosucio Caldas, siendo el área actual de treinta y nueve mil setecientos hectáreas.',2,3),
+	(1087,'CAÑAMOMO-LOMAPRIETA',5397,'El Resguardo Cañamomo y Lomaprieta se encuentra ubicado en el municipio de Supía Caldas, es considerado uno de los más antiguos de Colombia.Cañamomo y Lomaprieta es uno de los 6 resguardos indígenas legalmente constituidos en el departamento de Caldas. Cuenta con 32 comunidades.',2,4),
 	(1150,'SAN LORENZO DE CALDONO',11839,'La empresa Resguardo Indigena San Lorenzo De Caldono tiene como domicilio principal de su actividad la dirección, BARRIO EL PROGRESO en la ciudad de CALDONO, CAUCA. Esta empresa fué constituida como ENTIDAD SIN ANIMO DE LUCRO y se dedica a Actividades de otras asociaciones n c p. ',3,5),
 	(1080,'UNIDO UWA',4828,'El pueblo indígena U´wa - que traduce “gente inteligente que sabe hablar”- ocupa hoy gran parte del ecosistema natural de la Sierra Nevada del Cocuy, y el pie de monte de la Cordillera Oriental de los Andes, y las sabanas planas del departamento de Arauca. La extensión total del territorio propio del pueblo U´wa es de 352.422 hectáreas, repartidas en cinco departamentos del oriente colombiano, en los límites con Venezuela.',4,2),
 	(1194,'PURACE',3657,'El resguardo de Puracé tiene aproximadamente 13.451,6 hectáreas de tierra. Esta cantidad incluye las 3.413 hectáreas de la zona de reserva natural Parque Nacional Puracé, las 600 hectáreas que están en concesión a Industrias Puracé S.A. ',3,6),
