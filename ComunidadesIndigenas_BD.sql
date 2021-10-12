@@ -29,7 +29,7 @@ CREATE TABLE comunidadesIndigenasApp_municipio(
   mun_texto TEXT,
   fk_dep_id INTEGER NOT NULL,
   PRIMARY KEY(mun_id),
-  FOREIGN KEY(fk_dep_id) REFERENCES departamento(dep_id)
+  FOREIGN KEY(fk_dep_id) REFERENCES comunidadesIndigenasApp_departamento(dep_id)
 );
 
 INSERT INTO comunidadesIndigenasApp_municipio (mun_nombre,mun_texto,fk_dep_id) VALUES    
@@ -73,8 +73,8 @@ CREATE TABLE comunidadesIndigenasApp_resguardo(
   fk_aso_id INTEGER NOT NULL,
   fk_mun_id INTEGER NOT NULL,
   PRIMARY KEY(res_id),
-  FOREIGN KEY(fk_aso_id) REFERENCES asociacion_autoridad(aso_id),
-  FOREIGN KEY(fk_mun_id) REFERENCES municipio(mun_id)
+  FOREIGN KEY(fk_aso_id) REFERENCES comunidadesIndigenasApp_asociacion_autoridad(aso_id),
+  FOREIGN KEY(fk_mun_id) REFERENCES comunidadesIndigenasApp_municipio(mun_id)
 );
 
 INSERT INTO comunidadesIndigenasApp_resguardo (res_id,res_nombre,res_poblacion,res_texto,fk_aso_id,fk_mun_id) VALUES  
